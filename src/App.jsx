@@ -3,19 +3,27 @@ import Nav from "./Components/Nav";
 import Header from "./Components/Header";
 import Highlights from "./Components/Highlights";
 import Features from "./Components/Features";
-
-
+import RecentBooks from "./Components/RecentBooks";
+import Explore from "./Components/Explore";
+import Footer from "./Components/Footer";
 
 
 function App() {
   return (
     <>
-      <Nav />
-      <Header/>
-      <Highlights/>
-      <Features/>
+      <section id="landing">
+        <Nav />
+        <Header />
+      </section>
 
-      <h1>Library</h1>
+      <main>
+        <Highlights />
+        <Features />
+        <RecentBooks />
+        <Explore />
+      </main>
+
+      <Footer />
     </>
   );
 }
