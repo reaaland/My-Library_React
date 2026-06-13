@@ -81,6 +81,8 @@ button:active {
 
 .logo {
   width: 160px;
+  height: auto;
+  padding: 0;
 }
 
 .nav__container {
@@ -179,7 +181,8 @@ button:active {
 }
 
 header {
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
+  overflow: hidden;
 }
 
 .header__container {
@@ -202,6 +205,12 @@ header {
 .header__img--wrapper {
   padding: 20px;
   z-index: 2;
+  max-width: 720px;
+}
+
+.header__img--wrapper img {
+  max-height: 45vh;
+  object-fit: contain;
 }
 
 .container {
@@ -226,15 +235,13 @@ header {
 
 #highlights {
   position: relative;
-  max-width: 100vw;
-}
+  }
 
 #highlights:after,
 #highlights:before {
-  background: url('assets/wave.svg');
-  content: "";
+  background-image: url('./assets/wave.svg');
   position: absolute;
-  width: 101vw;
+  width: 100%;
   height: 12vw;
   left: 0;
   z-index: 1;
