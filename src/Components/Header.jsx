@@ -1,7 +1,8 @@
 import UndrawBooks from "../assets/Undraw_Books.svg";
 
-function Header() {
+const Header = () => {
   return (
+  <section id="landing">
     <header>
       <div className="header__container">
         <div className="header__description">
@@ -16,6 +17,7 @@ function Header() {
         </figure>
       </div>
     </header>
+  </section>
   );
 }
 

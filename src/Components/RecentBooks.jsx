@@ -7,7 +7,7 @@ import The5SecondRule from "../assets/book-6.jpeg";
 import YourNextFiveMoves from "../assets/book-7.jpg";
 import Mastery from "../assets/book-8.jpeg";
 
-function RecentBooks() {
+const RecentBooks = () => {
   return (
     <section id="recent">
       <div className="container">

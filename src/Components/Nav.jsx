@@ -3,7 +3,7 @@ import logo from "../assets/Library.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-function Nav() {
+const Nav = () => {
   return (
     <nav>
       <div className="nav__container">

@@ -1,6 +1,6 @@
 
 
-function Highlights() {
+const Highlights = () => {
 
   return (
     <section id="highlights">
@@ -12,7 +12,7 @@ function Highlights() {
           <div className="highlight__wrapper">
             <div className="highlight">
               <div className="highlight__img">
-                <i className="fa-solid fa-bolt"></i>
+                <FontAwesomeIcon icon="bolt" />
               </div>
               <h3 className="highlight__subtitle">
                 Easy and Quick

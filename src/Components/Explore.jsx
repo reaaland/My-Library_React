@@ -1,6 +1,6 @@
 
 
-function Explore() {
+const Explore = () => {
     return(
     <section id="explore">
       <div className="container">

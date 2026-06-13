@@ -2,7 +2,7 @@ import codingInterview from "../assets/crack the coding interview.png";
 import atomicHabits from "../assets/atomic habits.jpg";
 import davidGoggins from "../assets/david goggins.jpeg";
 
-function Features() {
+const Features = () => {
     return (
         <section id="features">
       <div className="container">
