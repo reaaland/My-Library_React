@@ -1,3 +1,5 @@
+import UndrawBooks from "../assets/Undraw_Books.svg";
+
 function Header() {
   return (
     <header>
@@ -10,7 +12,7 @@ function Header() {
           </a>
         </div>
         <figure className="header__img--wrapper">
-          <img src="./assets/Undraw_Books.svg" alt="" />
+          <img src={UndrawBooks} alt="Books illustration" />
         </figure>
       </div>
     </header>

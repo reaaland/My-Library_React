@@ -196,7 +196,7 @@ header {
 }
 
 .header__description {
-  display: flex;
+  display: flex; 
   flex-direction: column;
   align-items: center;
 }
