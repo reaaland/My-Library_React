@@ -1,24 +1,46 @@
+import React from "react";
 import logo from "../assets/Library.svg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 function Nav() {
   return (
     <nav>
       <div className="nav__container">
-        <img className="logo" src={logo} alt="Library logo" />
-
+        <a href="/">
+          <img src={logo} alt="" className="logo" />
+        </a>
+       
         <ul className="nav__links">
-          <li><a href="#" className="nav__link">Home</a></li>
-          <li><a href="#" className="nav__link">Contact</a></li>
-          <li><a href="#" className="nav__link nav__link--primary">Books</a></li>
-        </ul>
-
-        <button className="btn__menu">
-          <i className="fa-solid fa-bars"></i>
+          <li className="nav__list">
+            <a href="/" className="nav__link">
+            Home
+            </a>
+          </li>
+          <li className="nav__list">
+            <a href="/" className="nav__link">
+            Contact
+            </a>
+          </li>
+          <li className="nav__list">
+            <a href="/" className="nav__link  nav__link--Primary">
+            Books
+            </a>
+          </li>
+          <button className="btn__menu">
+          <FontAwesomeIcon icon={faBars} />
         </button>
-
+        <li className="nav__icon">
+          <a href="/cart" className="nav__link">
+          <FontAwesomeIcon icon="shopping-cart" />
+          </a>
+          <span className="cart__length">2</span>
+        </li>
+        </ul>
+        </div>
         <div className="menu__backdrop">
           <button className="btn__menu btn__menu--close">
-            <i className="fa-solid fa-times"></i>
+            <FontAwesomeIcon icon={faTimes} />
           </button>
 
           <ul className="menu__links">
@@ -29,13 +51,10 @@ function Nav() {
               <a href="#features" className="menu__link">Books</a>
             </li>
             <li className="menu__list">
-              <span className="menu__link no-cursor">
-                Contacts
-               </span>
+              <a href="#features" className="menu__link">Cart</a>
             </li>
           </ul>
         </div>
-      </div>
     </nav>
   );
 }
