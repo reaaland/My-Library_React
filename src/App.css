@@ -239,24 +239,30 @@ header {
 
 #highlights:after,
 #highlights:before {
-  background-image: url('./assets/wave.svg');
+   background-image: url("./assets/wave.svg");
+  content: "";
   position: absolute;
   width: 100%;
   height: 12vw;
   left: 0;
-  z-index: 1;
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: 0;
 }
 
 #highlights:before {
   transform: translateY(-100%);
-  top: 1px;
+  top: 0;
 }
 
 #highlights:after {
   transform: translateY(100%) rotate(180deg);
-  bottom: 1px;
+  bottom: 0;
+}
+
+#highlights .container {
+  position: relative;
+  z-index: 1;
 }
 
 .highlight__wrapper {
