@@ -13,7 +13,7 @@ function Features() {
           <div className="books">
             <div className="book">
               <figure className="book__img--wrapper">
-                <img className="book__img" src="./assets/crack the coding interview.png" alt="" />
+                <img className="book__img" src={codingInterview} alt="./assets/crack the coding interview.png" alt="" />
               </figure>
               <div className="book__title">
                 Crack the Coding Interview
@@ -31,7 +31,7 @@ function Features() {
             </div>
             <div className="book">
               <figure className="book__img--wrapper">
-                <img className="book__img" src="./assets/atomic habits.jpg" alt=""/>
+                <img className="book__img" src={atomicHabits} alt="./assets/atomic habits.jpg"/>
               </figure>
               <div className="book__title">
                 Atomic Habits
@@ -49,7 +49,7 @@ function Features() {
             </div>
             <div className="book">
               <figure className="book__img--wrapper">
-                <img className="book__img" src="./assets/david goggins.jpeg" alt="" />
+                <img className="book__img" src={davidGoggins} alt="./assets/david goggins.jpeg"/>
               </figure>
               <div className="book__title">
                 Can't Hurt Me

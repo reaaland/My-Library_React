@@ -1,8 +1,9 @@
 
 
 function Highlights() {
+
   return (
-    <section data-section="highlights" className="highlights">
+    <section id="highlights">
       <div className="container">
         <div className="row">
           <h2 className="section__title">
