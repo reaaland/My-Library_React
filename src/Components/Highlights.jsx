@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBolt, faBookOpen, faTags } from "@fortawesome/free-solid-svg-icons";
-import Highlight from "./Highlight";
+import Highlight from "./ui/Highlight";
 
 const Highlights = () => {
 
