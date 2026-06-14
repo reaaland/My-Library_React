@@ -1,23 +1,23 @@
 import React from "react";
 import "./App.css";
 import Nav from "./Components/Nav";
-import Header from "./Components/Header";
-import Highlights from "./Components/Highlights";
-import Features from "./Components/Features";
-import RecentBooks from "./Components/RecentBooks";
-import Explore from "./Components/Explore";
 import Footer from "./Components/Footer";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import HomePage from "./Pages/HomePage";
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./Pages/HomePage";
+import Books from "./Pages/BooksPage";
 
 function App() {
   return (
     <Router>
       <div className="App">
-      <Nav />
-      <Home/>
-      <Footer />
+        <Nav />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/books" element={<Home />} />
+        </Routes>
+
+        <Footer />
       </div>
     </Router>
   );
