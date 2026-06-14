@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../assets/Library.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = () => {
   return (
@@ -23,7 +23,7 @@ const Nav = () => {
             </a>
           </li>
           <li className="nav__list">
-            <a href="/" className="nav__link  nav__link--Primary">
+            <a href="/" className="nav__link  nav__link--primary">
             Books
             </a>
           </li>
@@ -32,7 +32,7 @@ const Nav = () => {
         </button>
         <li className="nav__icon">
           <a href="/cart" className="nav__link">
-          <FontAwesomeIcon icon="shopping-cart" />
+          <FontAwesomeIcon icon={faShoppingCart} />
           </a>
           <span className="cart__length">2</span>
         </li>
