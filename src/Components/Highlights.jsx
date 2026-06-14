@@ -3,7 +3,6 @@ import { faBolt, faBookOpen, faTags } from "@fortawesome/free-solid-svg-icons";
 import Highlight from "./ui/Highlight";
 
 const Highlights = () => {
-
   return (
     <section id="highlights">
       <div className="container">
@@ -34,6 +33,6 @@ const Highlights = () => {
       </div>
     </section>
   );
-  }
+  };
 
 export default Highlights;
