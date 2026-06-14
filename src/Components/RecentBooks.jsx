@@ -6,6 +6,7 @@ import lawsOfPower from "../assets/book-5.jpeg";
 import The5SecondRule from "../assets/book-6.jpeg";
 import YourNextFiveMoves from "../assets/book-7.jpg";
 import Mastery from "../assets/book-8.jpeg";
+import DeepWork from "../assets/deep work.jpeg";
 
 const RecentBooks = () => {
   return (
