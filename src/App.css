@@ -121,8 +121,14 @@ button:active {
   text-decoration: none;
 }
 
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .cart__length {
-  position: absolute;
+  position: relative;
   top: -8px;
   right: -12px;
 
@@ -143,11 +149,12 @@ button:active {
 }
 
 .btn__menu {
-  background-color: transparent;
-  font-size: 40px;
+  background: transparent;
   border: none;
+  font-size: 28px;
   color: #7342d6;
   display: none;
+  cursor: pointer;
 }
 
 .menu__backdrop {
@@ -422,7 +429,15 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .nav__links .nav__list {
+    display: none;
+  }
+
   .btn__menu {
+    display: block;
+  }
+
+  .nav__icon {
     display: block;
   }
 
