@@ -8,22 +8,17 @@ import RecentBooks from "./Components/RecentBooks";
 import Explore from "./Components/Explore";
 import Footer from "./Components/Footer";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import HomePage from "./Pages/HomePage";
 
 
 function App() {
   return (
     <Router>
-      <section id="landing">
-        <Nav />
-        <Header />
-      </section>
-      <main>
-        <Highlights />
-        <Features />
-        <RecentBooks />
-        <Explore />
-      </main>
+      <div className="App">
+      <Nav />
+      <Home/>
       <Footer />
+      </div>
     </Router>
   );
 }
