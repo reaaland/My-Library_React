@@ -19,7 +19,7 @@ export const books = [
     url: codingInterview,
     originalPrice: 59.95,
     salePrice: 14.95,
-    rating: 4.5,
+    rating: 5,
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ export const books = [
     url: atomicHabits,
     originalPrice: 59.95,
     salePrice: 14.95,
-    rating: 4.5,
+    rating: 5,
   },
   {
     id: 3,
