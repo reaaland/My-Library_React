@@ -12,8 +12,8 @@ const Features = () => {
           </h2>
           <div className="books">
             <div className="book">
-              <figure className="book__img--wrapper">
-                <img className="book__img" src={codingInterview} alt="./assets/crack the coding interview.png" alt="" />
+              <figure >
+              <img className="book__img" src={codingInterview} alt="Crack the Coding Interview" />
               </figure>
               <div className="book__title">
                 Crack the Coding Interview

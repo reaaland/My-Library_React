@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "React-dom";
+
 
 import { library } from "@fontawesome/fontawesome-svg-core";
 import {faBars, faShoppingCart, faTimes} from "@fortawesome/free-solid-svg-icons";
