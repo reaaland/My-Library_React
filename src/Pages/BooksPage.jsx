@@ -44,7 +44,7 @@ function filterBooks(event) {
 
               <div className="books">
                 {booksList.map((book) => (
-                  <Book book={book} key={book.id} />
+                  <Book book={book} key={book.id} {...book} />
                 ))}
               </div>
             </div>

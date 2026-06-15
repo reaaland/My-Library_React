@@ -1,8 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Book = ({ book }) => {
-  const { url, title, originalPrice, salePrice, rating } = book;
-
+const Book = ({
+  url,
+  title,
+  originalPrice,
+  salePrice,
+  rating,
+}) => {
+ 
   return (
     <div className="book">
       <figure className="book__img--wrapper">

@@ -5,6 +5,7 @@ import Footer from "./Components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/HomePage";
 import Books from "./Pages/BooksPage";
+import BookInfo from "./Pages/BookInfo";
 
 function App() {
   return (
