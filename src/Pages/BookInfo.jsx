@@ -27,7 +27,7 @@ const BookInfo = ({ books }) => {
                             <h2 className="book__selected--title">Crack the Code</h2>
                             <Rating rating="4.5" />
                             <div className="book__selected price">
-                                <Price originalPrice={50} salePrice={14.95} />
+                                <Price originalPrice={50} salePrice={20.00} />
                             </div>
                         </div>
                     </div>
