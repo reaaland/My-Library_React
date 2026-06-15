@@ -14,7 +14,7 @@ const Book = ({
  
   return (
     <div className="book">
-      <Link to="/books/1">
+      <Link to={`/books/${id}` }>
       <figure className="book__img--wrapper">
         <img
           className="book__img"
@@ -24,7 +24,7 @@ const Book = ({
       </figure>
         </Link>
       <div className="book__title">
-        <Link to="/" className="book__title--link">
+        <Link to={`/books/${id}` }className="book__title--link">
           {title}
         </Link>
       </div>
