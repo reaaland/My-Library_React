@@ -1,6 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
+import Rating from "./Rating";
 
 const Book = ({
+  id,
   url,
   title,
   originalPrice,
@@ -10,6 +13,7 @@ const Book = ({
  
   return (
     <div className="book">
+      <Link to="/books/1">
       <figure className="book__img--wrapper">
         <img
           className="book__img"
@@ -17,38 +21,14 @@ const Book = ({
           alt={title}
         />
       </figure>
-
+        </Link>
       <div className="book__title">
-        <a href="/" className="book__title--link">
+        <Link to="/" className="book__title--link">
           {title}
-        </a>
+        </Link>
       </div>
-
-      <div className="book__ratings">
-        {[...Array(Math.floor(rating))].map((_, index) => (
-          <FontAwesomeIcon
-            key={index}
-            icon="star"
-          />
-        ))}
-
-        {!Number.isInteger(rating) && (
-          <FontAwesomeIcon icon="star-half-alt" />
-        )}
-      </div>
-
-      <div className="book__price">
-        {salePrice ? (
-          <>
-            <span className="book__price--normal">
-              ${originalPrice}
-            </span>
-            ${salePrice}
-          </>
-        ) : (
-          <>${originalPrice}</>
-        )}
-      </div>
+      <Rating rating={rating} />
+      <Price salePrice={book.salePrice} originalPrice={book. originalPrice} />
     </div>
   );
 };
