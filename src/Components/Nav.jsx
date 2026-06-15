@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../assets/Library.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   function openMenu() {
@@ -14,25 +15,25 @@ const Nav = () => {
   return (
     <nav>
       <div className="nav__container">
-  <a href="/">
+    <Link to="/">
     <img src={logo} alt="" className="logo" />
-  </a>
+  </Link>
 
   <ul className="nav__links">
     <li className="nav__list">
-      <a href="/" className="nav__link">Home</a>
+      <Link to="/" className="nav__link">Home</Link>
     </li>
 
     <li className="nav__list">
-      <a href="#features" className="nav__link nav__link--primary">Books</a>
+      <Link to="/books" className="nav__link nav__link--primary">Books</Link>
     </li>
   </ul>
 
   <div className="nav__actions">
-    <a href="/cart" className="nav__link nav__cart">
+   <Link to="/cart" className="nav__link nav__cart">
       <FontAwesomeIcon icon={faShoppingCart} />
       <span className="cart__length">2</span>
-    </a>
+    </Link>
 
     <button className="btn__menu" onClick={openMenu}>
       <FontAwesomeIcon icon={faBars} />
