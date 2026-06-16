@@ -13,7 +13,19 @@ function App() {
   const [cart, setCart] = useState([]);
 
   function addToCart(book) {
-    setCart([...cart, book]);
+    setCart([...cart, { ...book, quantity: 1 }]);
+  }
+
+  function updateQuantity(bookId, quantity) {
+    setCart(
+      cart.map((book) =>
+        book.id === bookId ? { ...book, quantity } : book
+      )
+    );
+  }
+
+  function removeFromCart(bookId) {
+    setCart(cart.filter((book) => book.id !== bookId));
   }
 
   return (
@@ -24,8 +36,20 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/books" element={<Books />} />
-          <Route path="/books/:id" element={<BookInfo addToCart={addToCart} />} />
-          <Route path="/cart" element={<Cart cart={cart} />} />
+          <Route
+            path="/books/:id"
+            element={<BookInfo addToCart={addToCart} />}
+          />
+          <Route
+            path="/cart"
+            element={
+              <Cart
+                cart={cart}
+                updateQuantity={updateQuantity}
+                removeFromCart={removeFromCart}
+              />
+            }
+          />
         </Routes>
 
         <Footer />
