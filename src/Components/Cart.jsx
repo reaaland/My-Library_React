@@ -1,9 +1,7 @@
 import React from "react";
 
-const Cart = ({ cart }) => {
-    const total = cart.reduce((sum, book) => {
-  return sum + (book.salePrice || book.originalPrice);
-}, 0);
+const Cart = ({ cart = [] }) => {
+  const total = cart.reduce((sum, book) => sum + (book.salePrice || book.originalPrice || 0), 0);
 
   return (
     <div id="books__body">
@@ -23,34 +21,41 @@ const Cart = ({ cart }) => {
                 {cart.map((book) => (
                   <div className="cart__item" key={book.id}>
                     <div className="cart__book">
-                      <img
-                        src={book.url}
-                        className="cart__book--img"
-                        alt={book.title}
-                      />
+                      <img src={book.url} className="cart__book--img" alt={book.title} />
 
                       <div className="cart__book--info">
                         <span className="cart__book--title">{book.title}</span>
-                        <span className="cart__book--price">
-                          ${book.salePrice || book.originalPrice}
-                        </span>
+                        <span className="cart__book--price">${(book.salePrice || book.originalPrice || 0).toFixed(2)}</span>
                         <button className="cart__book--remove">Remove</button>
                       </div>
                     </div>
 
                     <div className="cart__quantity">
-                      <input type="number" min="1" value="1" readOnly />
+                      <input type="number" min="1" value={1} readOnly />
                     </div>
 
-                    <div className="cart__total">
-                      ${book.salePrice || book.originalPrice}
-                    </div>
+                    <div className="cart__total">${(book.salePrice || book.originalPrice || 0).toFixed(2)}</div>
                   </div>
                 ))}
               </div>
 
               <div className="cart__summary">
-                <h3>Total: ${total.toFixed(2)}</h3>
+                <div className="cart__summary--row">
+                  <span>Subtotal</span>
+                  <span>${total.toFixed(2)}</span>
+                </div>
+
+                <div className="cart__summary--row">
+                  <span>Tax</span>
+                  <span>${(total * 0.1).toFixed(2)}</span>
+                </div>
+
+                <div className="cart__summary--row">
+                  <span>Total</span>
+                  <span>${(total * 1.1).toFixed(2)}</span>
+                </div>
+
+                <button className="cart__summary--checkout">Proceed to checkout</button>
               </div>
             </div>
           </div>

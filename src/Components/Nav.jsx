@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 
-const Nav = () => {
+const Nav = ( { cart }) => {
   function openMenu() {
     document.body.classList += " menu-open";
   }
@@ -32,7 +32,7 @@ const Nav = () => {
   <div className="nav__actions">
    <Link to="/cart" className="nav__link nav__cart">
       <FontAwesomeIcon icon={faShoppingCart} />
-      <span className="cart__length">2</span>
+      <span className="cart__length">{cart.length}</span>
     </Link>
 
     <button className="btn__menu" onClick={openMenu}>
